@@ -57,6 +57,11 @@ I've also included custom assertions to enhance the readability and expressivene
 ### Screenshot on Test Failure
 
 In case of a test failure, a screenshot will be captured and saved for your reference. This helps in diagnosing and debugging issues.
+
+### Execution Time Logging
+
+Each test execution time is logged, providing you with insights into the time taken for each test. This helps in identifying slow-performing tests and optimizing them for efficiency.
+
 ### Test Reporting
 
 After the execution of the entire test plan, a test report will be automatically generated using ExtentReport. This report provides a comprehensive view of the test results.
