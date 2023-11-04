@@ -8,6 +8,7 @@ Technology Stack
     Java
     Maven
     Playwright
+    log4j
     JUnit 5
     Lombok
     ExtentReport
