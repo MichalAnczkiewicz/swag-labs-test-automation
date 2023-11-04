@@ -23,16 +23,17 @@ public class BrowserConfig {
     private Playwright playwright;
 
     private BrowserContext browserContext;
+    private final boolean loginWithCookie;
+
+    public BrowserConfig(boolean loginWithCookie) {
+
+        this.loginWithCookie = loginWithCookie;
+    }
 
     public Page createPage() {
 
         browserContext = createBrowserContext();
         return browserContext.newPage();
-    }
-
-    public BrowserContext getBrowserContext() {
-
-        return this.browserContext;
     }
 
     public void closeBrowser() {
@@ -49,7 +50,9 @@ public class BrowserConfig {
 
         browserContext = browser.newContext(newContextOptions);
         browserContext.addInitScript("delete window.navigator.serviceWorker");
-//        browserContext.addCookies(createCookies());
+
+        if (this.loginWithCookie)
+            browserContext.addCookies(createCookies());
         return browserContext;
     }
 
@@ -127,9 +130,9 @@ public class BrowserConfig {
     private List<Cookie> createCookies() {
         List<Cookie> cookies = new ArrayList<>();
 
-        Cookie cookie = new Cookie("", "");
+        Cookie cookie = new Cookie("session-username", "standard_user");
         cookie.setPath("/");
-        cookie.setDomain("");
+        cookie.setDomain("www.saucedemo.com");
         cookies.add(cookie);
         return cookies;
     }
