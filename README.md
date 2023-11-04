@@ -2,7 +2,7 @@
 
 Java Playwright Test Automation
 
-Welcome to the Java Playwright Test Automation repository. This repository contains automated tests for your web applications using the Playwright framework in Java.
+Welcome to the Java Playwright Test Automation repository. This repository contains automated tests for demo saucelabs application using the Playwright framework in Java.
 Technology Stack
 
     Java
@@ -12,8 +12,8 @@ Technology Stack
     Lombok
     ExtentReport
 
-Test Execution Options
-View Mode
+### Test Execution Options
+#### View Mode
 
 You can choose to run tests in different view modes using the `-DVIEW_MODE` Maven option. Supported view modes include:
 
@@ -25,7 +25,7 @@ Example:
 ```bash
 mvn clean test -DVIEW_MODE=MOBILE
 ```
-Browsers
+#### Browsers
 
 You have the flexibility to run tests in different browsers using the `-DBROWSER` Maven option. Supported browsers include:
 
@@ -38,7 +38,7 @@ Example:
 ```bash
 mvn clean test -DBROWSER=FIREFOX
 ````
-Test Suites
+#### Test Suites
 
 You can execute different test suites based on the `-DGROUPS` Maven option. Define your test tags and group your tests accordingly.
 
