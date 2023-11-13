@@ -2,7 +2,7 @@ package com.saucedemo.helpers.interfaces;
 
 public interface TestHelpersWeb {
 
-    void openWebsiteAndAcceptPP(String url);
+    void openWebsite(String url);
 
     default int initIndex(int listSize) {
 

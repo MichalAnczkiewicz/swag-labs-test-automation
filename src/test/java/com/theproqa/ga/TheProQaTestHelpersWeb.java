@@ -1,4 +1,4 @@
-package com.saucedemo.helpers;
+package com.theproqa.ga;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.TimeoutError;
@@ -7,16 +7,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
-import static com.saucedemo.ui.BaseTest.SERVICE_URL;
-
-public class SauceLabsTestHelpersWeb implements TestHelpersWeb {
+public class TheProQaTestHelpersWeb implements TestHelpersWeb {
 
     private static final Logger LOGGER
-            = LogManager.getLogger(SauceLabsTestHelpersWeb.class);
-
+            = LogManager.getLogger(TheProQaTestHelpersWeb.class);
     private final Page page;
 
-    public SauceLabsTestHelpersWeb(Page page) {
+    public TheProQaTestHelpersWeb(Page page) {
 
         this.page = page;
     }
@@ -31,12 +28,12 @@ public class SauceLabsTestHelpersWeb implements TestHelpersWeb {
             try {
                 page.waitForResponse(response ->
                                 response.url().contains(url) && response.status() == 200,
-                        () -> page.navigate(SERVICE_URL.concat(url)));
+                        () -> page.navigate("https://yourservice.com".concat(url)));
                 success = true;
                 break;
             } catch (TimeoutError e) {
 
-                LOGGER.error(String.format("Page: %s didn't open successfully %d times. ", url, retryCount+1));
+                LOGGER.error(String.format("Page: %s didn't open successfully %d times. ", url, retryCount + 1));
             }
         }
 

@@ -45,7 +45,7 @@ public class LoginTests extends BaseTest {
 
         testHelpersWeb = new SauceLabsTestHelpersWeb(page);
         loginPage = new LoginPage(page);
-        testHelpersWeb.openWebsiteAndAcceptPP("");
+        testHelpersWeb.openWebsite("");
     }
 
     @JiraIssue("JIRA_1")

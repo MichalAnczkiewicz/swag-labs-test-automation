@@ -51,7 +51,7 @@ public class ListingTests extends BaseTest {
         listingPage = new ListingPage(page);
         productPage = new ProductPage(page);
         detailsPage = new DetailsPage(page);
-        testHelpersWeb.openWebsiteAndAcceptPP(LISTING_URL);
+        testHelpersWeb.openWebsite(LISTING_URL);
     }
 
     @JiraIssue("JIRA-2")

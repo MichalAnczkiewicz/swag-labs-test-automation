@@ -74,3 +74,17 @@ Example:
 ```bash
 mvn clean test -DEMAIL_PASSWORD=your_password
 ```
+
+### Google Analytics Event Tracking Test
+
+Repo also contain test _gaEventShouldBeTriggeredAfterSendingForm_ which showcases the possibility of testing if GA event
+was triggered after some specific action on website was done - in this example form has been sent.
+
+Methodology:
+
+- Page Interaction: The test simulates user interaction by filling out and submitting a form on the contact page.
+- Event Verification: It waits for and captures a network request to Google Analytics to confirm that the event en=Send_Form_Contact is being sent.
+- Assertion: The test asserts that the GA request contains the specified event name, indicating successful event tracking.
+
+Usage:
+This test may be part of suite to ensure the integrity of website's analytics and tracking mechanisms. It is vital for verifying the real-time tracking functionality and should be run as part of regular testing cycles to maintain the reliability of data collection processes.

@@ -2,7 +2,6 @@ package com.saucedemo.ui.cart;
 
 import com.microsoft.playwright.Page;
 import com.saucedemo.core.annotations.JiraIssue;
-import com.saucedemo.core.assertions.WebAssertions;
 import com.saucedemo.core.browserConfig.AfterTestsConfig;
 import com.saucedemo.core.browserConfig.BrowserConfig;
 import com.saucedemo.core.browserConfig.TestReportsConfig;
@@ -53,7 +52,7 @@ public class ShoppingCartTests extends BaseTest {
         productPage = new ProductPage(page);
         navbarPage = new NavbarPage(page);
         cartPage = new CartPage(page);
-        testHelpersWeb.openWebsiteAndAcceptPP(LISTING_URL);
+        testHelpersWeb.openWebsite(LISTING_URL);
     }
 
     @JiraIssue("JIRA-5")
